@@ -15,7 +15,8 @@
 
 .newsletter {
   background-color: #03054e;
-  max-width: 1528px;
+  /* max-width: 1528px; */
+  width: 100%;
   margin: 0 auto;
 }
 

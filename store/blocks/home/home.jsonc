@@ -5,9 +5,9 @@
       "footer": "footer#empty"
     },
     "blocks":[      
-      "responsive-layout.desktop#home",
-      "responsive-layout.tablet#home",
-      "responsive-layout.phone#home"
+      "responsive-layout.desktop#donaciones",
+      "responsive-layout.tablet#donaciones",
+      "responsive-layout.phone#donaciones"
     ]
   },
 

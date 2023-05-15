@@ -1,12 +1,12 @@
 {
     "store.custom#{influencer-donaciones.home}": {
         "blocks": [
-            "responsive-layout.desktop",
-            "responsive-layout.tablet",
-            "responsive-layout.phone"
+            "responsive-layout.desktop#donaciones",
+            "responsive-layout.tablet#donaciones",
+            "responsive-layout.phone#donaciones"
         ]
     },
-    "responsive-layout.desktop": {
+    "responsive-layout.desktop#donaciones": {
         "title": "Diseño Desktop",
         "children": [
             // "flex-layout.row#countdown-banner",
@@ -24,7 +24,7 @@
             "newsletter"
         ]
     },
-    "responsive-layout.tablet": {
+    "responsive-layout.tablet#donaciones": {
         "title": "Diseño Tablet",
         "children": [
             "list-context.image-list#banners-1",
@@ -41,7 +41,7 @@
             "newsletter"
         ]
     },
-    "responsive-layout.phone": {
+    "responsive-layout.phone#donaciones": {
         "title": "Diseño Mobile",
         "children": [
             "list-context.image-list#banners-1",

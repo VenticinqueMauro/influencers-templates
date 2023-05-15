@@ -1,0 +1,526 @@
+.flexRowContent--menu-link,
+.flexRowContent--main-header {
+  padding: 0 0.5rem;
+}
+
+/* Se oculta barra de búsqueda del menú */
+/* .flexCol--search-bar-col {
+  display:none;
+} */
+
+@media screen and (min-width: 40em) {
+  .flexRowContent--menu-link,
+  .flexRowContent--main-header {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .flexRowContent--menu-link,
+  .flexRowContent--main-header {
+    padding: 0 0.25rem;
+  }
+}
+
+.flexRowContent--menu-link {
+  background-color: #03044e;
+  color: #fff;
+}
+
+.flexRowContent--main-header {
+  /* background-color: #f0f0f0; */
+  background-color: #ffffff;
+}
+
+.flexRowContent--main-header-mobile {
+  align-items: center;
+  padding: 0.625rem 0.5rem;
+  background-color: #f0f0f0;
+}
+
+.flexRowContent--menu-link :global(.vtex-menu-2-x-styledLink) {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink) {
+  color: #727273;
+  font-size: 14px;
+}
+
+.flexRow--deals {
+  background-color: #0F3E99;
+  padding: 14px 0px;
+}
+
+.flexRow--deals .stretchChildrenWidth {
+  align-items: center;
+}
+
+.flexRow--deals .flexCol {
+  align-items: center;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+.flexCol--filterCol {
+  max-width: 500px;
+  min-width: 230px;
+}
+
+.flexCol--productCountCol {
+  align-items: flex-start;
+}
+
+.flexCol--orderByCol {
+  align-items: flex-end;
+}
+
+.flexCol--orderByMobileCol {
+  width: 42%;
+}
+
+.flexCol--filterMobileCol {
+  width: 38%;
+}
+
+.flexRow--quickviewMainRow {
+  display: flex;
+  max-height: 100%;
+}
+
+.flexColChild--quickviewDetails:first-child {
+  overflow-y: auto;
+  height: 66% !important;
+  overflow-x: hidden;
+}
+
+.flexColChild--quickviewDetails:last-child {
+  height: 34% !important;
+}
+
+.flexRow--addToCartRow {
+  padding-bottom: 1rem;
+}
+
+/* =============================== Influencers ============================== */
+
+.flexRow--topBar{
+  background-color:#022b60;
+  height:auto;
+}
+
+.flexRow--influencer-name{
+  background-color:#f5f5f5;
+  height:auto;
+}
+
+/* Div Datos (Desktop) */
+  .flexRow--div-datos {
+    background-color: #fff;
+  }
+
+  .flexCol--div-datos-col-1 {
+    height:300px;
+    /* background-color: #BBB; */
+  }
+
+  .flexColChild--div-datos-col-1 {
+    display: flex; 
+    flex-direction: row;
+    justify-content: right; /* Desktop: right - Mobile: center */
+    align-items: center;
+  }
+
+  .flexCol--div-datos-col-2 {
+    /* background-color: gray; */
+  }
+
+  .flexRow--div-datos-col-2-row-1{
+    /* background-color:pink; */
+    height:100px;
+  }
+
+  .flexCol--div-datos-col-2-row-2-col{
+    /* background-color:green; */
+    padding:10px;
+    height:200px;
+  }
+
+  .flexColChild--div-datos-col-2-row-2-col{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+
+  .flexCol--div-datos-col-2-row-1-col-1 {
+    /* background-color:red; */
+    height:100px;
+  }
+
+  .flexColChild--div-datos-col-2-row-1-col-1 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .flexCol--div-datos-col-2-row-1-col-2 {
+    /* background-color:green; */
+    height:100px;
+  }
+
+  .flexColChild--div-datos-col-2-row-1-col-2 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .flexCol--div-datos-col-2-row-1-col-3 {
+    /* background-color:blue; */
+    height:auto;
+  }
+
+  .flexColChild--div-datos-col-2-row-1-col-3 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+    /* Div Datos (Mobile) */
+    .flexRow--div-datos-mobile {
+      background-color: #fff;
+    }
+    
+    .flexCol--div-datos-col-1-mobile {
+      height:260px;
+      /* background-color: #BBB; */
+    }
+    
+    .flexColChild--div-datos-col-1-mobile {
+      display: flex; 
+      flex-direction: row;
+      justify-content: center; /* Desktop: right - Mobile: center */
+      align-items: center;
+    }
+    
+    .flexCol--div-datos-col-2-mobile {
+      background-color: gray;
+    }
+    
+    .flexRow--div-datos-col-2-row-1-mobile{
+      /* background-color:pink; */
+      height:auto;
+    }
+    
+    .flexCol--div-datos-col-2-row-2-col-mobile{
+      /* background-color:green; */
+      padding-bottom:0px;
+      height:auto;
+      text-align:center;
+    }
+    
+    .flexColChild--div-datos-col-2-row-2-col-mobile{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .flexCol--div-datos-col-2-row-1-col-1-mobile {
+      height:auto;
+    }
+    
+    .flexColChild--div-datos-col-2-row-1-col-1-mobile {
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    
+    .flexColChild--div-datos-col-2-row-1-col-2-mobile {
+      /* background-color:red; */
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    
+    .flexCol--div-datos-col-2-row-1-col-3-mobile {
+      height:auto;
+    }
+    
+    .flexColChild--div-datos-col-2-row-1-col-3-mobile {
+      /* background-color:cyan; */
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+.flexCol--shelf-01-col-1 {
+  /* background-color:#EEE; */
+  /* padding:10px; */
+  height:auto;
+}
+
+.flexColChild--shelf-01-col-1 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCol--shelf-01-col-2 {
+  /* background-color:#EEE; */
+  height:auto;
+}
+
+.flexColChild--shelf-01-col-2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCol--comercial {
+  /* background-color:orange; */
+}
+
+.flexColChild--comercial {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flexRow--shelf-marcas {
+  /* background-color:gray; */
+  padding:20px;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.flexRow--shelf-marcas-mobile {
+  /* background-color:gray; */
+  padding:20px;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.listPrice--summary {
+  justify-content:center;
+  /* background-color:red; */
+  color:#ed5395;
+}
+
+.flexRowContent--selling-price {
+  justify-content:center;
+  color:#ed5395;
+}
+
+.flexRow--footer-logo-container {
+  padding-top:40px;
+  padding-bottom:0px;
+  padding-left:40px;
+  padding-right:40px;
+  text-align:center;
+  /* background-color: lightblue; */
+}
+
+.flexRow--footer-columns-container {
+  padding-left:100px;
+  padding-right:100px;
+  /* background-color:lightgray; */
+}
+
+.flexColChild--footer-payment-methods {
+  text-align:center;
+}
+
+.flexRow--footer-powered-by {
+  padding-top:40px;
+  padding-bottom:0px;
+  padding-right:40px;
+}
+
+.flexColChild--powered-by {
+  padding-left:28px;
+}
+
+.flexCol--footer-column {
+  /* background-color:blue; */
+  height:auto;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--footer-column) {
+  height:auto !important; /* Para alinear los ítems del menú del footer */
+}
+
+
+.flexRow--brand-stock-desktop :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  display:flex;
+  width:auto !important;
+}
+
+.flexRow--brand-stock-phone :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  display:flex;
+  width:auto !important;
+  /* background-color: red; */
+}
+
+.flexRow--sku-selector-quantity {
+  /* background-color: #CCCCCC; */
+}
+
+.flexCol--sku-selector {
+  /* background-color:blue; */
+}
+
+.flexCol--quantity {
+  /* background-color:lightcyan; */
+  /* display:flex; */
+  /* justify-content: center; */
+  /* vertical-align: middle; */
+  /* align-items: center; */
+}
+
+.flexRow--compra-segura {
+  /* background-color:aquamarine; */
+}
+
+.flexCol--compra-segura {
+  /* background-color: #DDDDDD; */
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.flexColChild--compra-segura {
+  /* background-color: green; */
+}
+
+/* ================= Product Specifications PDP (Principal) ================= */
+.flexRow--productSpecificationRightCol {
+  margin-top:5px;
+}
+
+/* Para que las dos columnas tengan un width variable */
+.flexRow--productSpecificationRightCol :global(.vtex-flex-layout-0-x-stretchChildrenWidth){
+  width:auto !important;
+}
+
+.flexCol--productSpecificationNameRCol {
+  padding-top:6px;
+  color: #3f3f40;
+}
+
+.flexCol--productSpecificationValueRCol {
+  padding-top:6px;
+} 
+
+.flexRow--productSpecificationValueRCol {
+  padding-top:16px;
+  color: #3f3f40;
+  font-weight: bold;
+}
+
+/* =============== Fin Product Specifications PDP (Principal) =============== */
+
+.flexRow--buy-button :global(.vtex-flex-layout-0-x-stretchChildrenWidth){
+
+  justify-content: flex-start;
+  
+}
+
+/* ============================ Botón compra PDP ============================ */
+
+.flexRow--buy-button :global(.vtex-button) {
+  background-color: #0f3e99;
+  border: 1px solid #0f3e99;
+  font-weight:bold;
+  border-radius: 6px;
+  text-transform: capitalize;
+  width:100%;
+  
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+.flexRow--shelf-01-col-2-row-1 {
+  width:100%;
+  padding-left:60px;
+  padding-right:60px;
+}
+
+.flexColChild--shelf-01-col-2-row-1-col-1 {
+  /* background-color:cyan; */
+
+}
+
+.flexColChild--shelf-01-col-2-row-1-col-2 {
+  /* background-color:blue; */
+  display:flex;
+  justify-content: flex-end;
+}
+
+.flexCol--logo-col {
+  /* background-color: orange; */
+  /* bottom: 50px !important; */
+  height:45px !important;
+}
+
+/* ========================================================================== */
+
+/* ============================= Row Beneficios ============================= */
+.flexRow--beneficios {
+  border: 1px solid #DDDDDD;
+  max-width:1500px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-top:20px;
+  margin-bottom:50px;
+  box-shadow: 10px 10px 10px #EEEEEE;
+}
+
+.flexCol--beneficios-inner-col {
+  max-width:400px;
+}
+
+.flexCol--beneficios-img-col {
+  /* background-color:red; */
+}
+
+.flexColChild--beneficios-img-col {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexRow--beneficios-col-1-row-1-col-2-row-1{
+  /* background-color:orange; */
+}
+
+.flexRow--beneficios-col-1-row-1-col-2-row-2{
+  /* background-color:red; */
+}
+
+@media only screen and (max-width: 640px) {
+  .flexColChild--shelf-01-col-2-row-1-col-2 {
+    height: 40px !important;
+    margin-top:0px;
+    margin-bottom:10px;
+  }
+}
+/* ========================================================================== */

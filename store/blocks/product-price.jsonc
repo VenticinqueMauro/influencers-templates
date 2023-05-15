@@ -1,0 +1,55 @@
+{
+  "flex-layout.row#selling-price": {
+    "props": {
+      "blockClass":"selling-price-row",
+      "colGap": 2,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "marginBottom": 4
+    },
+    "children": [
+      "product-selling-price"
+    ]
+  },
+
+  "flex-layout.row#list-price-savings": {
+    "props": {
+      "colGap": 2,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "marginBottom": 2,
+      "marginTop": 5
+    },
+    "children": [
+      "product-list-price",
+      "product-price-savings"//,
+      // "product-selling-price"
+    ]
+  },
+
+  /* ================================= Precios ================================ */
+
+  "product-list-price": {
+    "props":{
+      "blockClass":"list-price"
+    }
+  },
+
+  "product-price-savings": {
+    "props":{
+      "blockClass":"price-savings",
+      "percentageStyle":"locale",
+      "markers": ["discount"],
+      "message": "<discount>{savingsPercentage} OFF</discount>"
+    }
+  },
+
+  "product-selling-price": {
+    "props":{
+      "blockClass":"selling-price"
+    }
+  }
+
+  /* ========================================================================== */
+
+}

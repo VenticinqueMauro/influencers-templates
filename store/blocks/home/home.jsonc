@@ -1,0 +1,41 @@
+{
+  "store.home": {
+    "parent": { 
+      "header": "header#header", 
+      "footer": "footer#empty"
+    },
+    "blocks":[      
+      "responsive-layout.desktop#home",
+      "responsive-layout.tablet#home",
+      "responsive-layout.phone#home"
+    ]
+  },
+
+  "responsive-layout.desktop#home": {
+    "title":"Diseño Desktop",
+    "children": [
+      "rich-text#home-placeholder"
+    ]
+  },
+
+  "responsive-layout.tablet#home": {
+    "title":"Diseño Tablet",
+    "children": [
+      "rich-text#home-placeholder"
+    ]
+  },
+
+  "responsive-layout.phone#home": {
+    "title":"Diseño Mobile",
+    "children": [
+      "rich-text#home-placeholder"
+    ]
+  },
+  
+  "rich-text#home-placeholder": {
+    "title":"Home - Placeholder",
+    "props": {
+      "text": "**Home**"
+    }
+  }
+}

@@ -1,0 +1,573 @@
+{
+  
+  "store.product": {
+    "parent": { 
+      "header": "header#header", 
+      "footer": "footer#empty"
+    },
+    "blocks":[      
+      "store.custom#{influencer-pdp}"
+    ]
+  },
+
+  "store.custom#{influencer-pdp}": {
+    "blocks": [  
+      "responsive-layout.desktop#pdp",
+      "responsive-layout.phone#pdp"
+    ]
+  },
+  
+  /* =============================== PDP Desktop ============================== */
+
+  "responsive-layout.desktop#pdp": {
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#compra-segura",
+      "condition-layout.product#availability-desktop",
+      "flex-layout.row#description",
+      "flex-layout.row#specifications-title",
+      "product-specification-group#table",
+      "shelf.relatedProducts",
+      "product-reviews",
+      "product-questions-and-answers"
+    ]
+  },
+
+  /* ================================ PDP Phone =============================== */
+
+  "responsive-layout.phone#pdp": {
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#compra-segura",
+      "condition-layout.product#availability-phone",
+      "flex-layout.row#description",
+      "flex-layout.row#specifications-title",
+      "product-specification-group#table",
+      "shelf.relatedProducts",
+      "product-reviews",
+      "product-questions-and-answers"
+    ]
+  },
+
+
+  /* ========================= Product Specifications ========================= */
+  
+  "flex-layout.row#specifications-title": {
+    "children": ["rich-text#specifications"]
+  },
+
+  "rich-text#specifications": {
+    "props": {
+      "text": "##### Product Specifications"
+    }
+  },
+
+  /* ============================== Compra segura ============================= */
+  
+  "flex-layout.row#compra-segura": {
+    "props":{
+      "blockClass":["compra-segura"]
+    },
+    "children": ["flex-layout.col#compra-segura"]
+  },
+
+  "flex-layout.col#compra-segura": {
+    "props":{
+      "blockClass":["compra-segura"]
+    },
+    "children": ["image#compra-segura",
+                 "image#vertical-separator",
+                 "rich-text#compra-segura"]
+  },
+
+  "image#compra-segura": {
+    "title":"Compra 100% segura",
+    "props": {
+      "blockClass": "compra-segura",
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155441"
+    }
+  },
+  
+  "image#vertical-separator": {
+    "title":"Separator",
+    "props": {
+      "blockClass": "compra-segura",
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155442"
+    }
+  },
+  
+  "rich-text#compra-segura": {
+    "props": {
+      "blockClass": "compra-segura",
+      "text": "Compra<br>100% segura"
+    }
+  },
+
+  /* ========================================================================== */
+
+  "flex-layout.row#product-breadcrumb": {
+    "props": {
+      "marginTop": 4
+    },
+    "children": ["breadcrumb"]
+  },
+  "flex-layout.row#description": {
+    "props": {
+      "marginBottom": 7
+    },
+    "children": ["product-description"]
+  },
+  
+  "condition-layout.product#availability-desktop": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-main-desktop",
+      "Else": "flex-layout.row#product-availability"
+    }
+  },
+  
+  "condition-layout.product#availability-phone": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-main-phone",
+      "Else": "flex-layout.row#product-availability"
+    }
+  },
+
+  "flex-layout.row#product-main-desktop": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7
+    },
+    "children": ["flex-layout.col#stack", 
+                 "flex-layout.col#right-col-desktop"]
+  },
+
+  "flex-layout.row#product-main-phone": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7
+    },
+    "children": ["flex-layout.col#stack", 
+                 "flex-layout.col#right-col-phone"]
+  },
+
+  "stack-layout": {
+    "props": {
+      "blockClass": "product"
+    },
+    "children": [
+      "flex-layout.row#product-image",
+      "product-bookmark",
+      "product-specification-badges"
+    ]
+  },
+
+  "product-specification-badges": {
+    "props": {
+      "specificationGroupName": "Group",
+      "specificationName": "On Sale",
+      "visibleWhen": "True",
+      "displayValue": "SPECIFICATION_NAME"
+    }
+  },
+
+  "flex-layout.col#stack": {
+    "children": ["stack-layout"],
+    "props": {
+      "width": "60%",
+      "rowGap": 0
+    }
+  },
+  "flex-layout.row#product-image": {
+    "children": ["product-images"]
+  },
+  "product-images": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "16:9"
+      },
+      "displayThumbnailsArrows": true
+    }
+  },
+  
+  "flex-layout.col#right-col-desktop": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "flex-layout.row#brand-stock-desktop",
+      "flex-layout.row#product-name",
+      "product-identifier.product",
+      "product-specification-group#rcol",
+      "product-rating-summary",
+      "flex-layout.row#list-price-savings",
+      "flex-layout.row#selling-price",
+      "product-installments",
+      "product-separator",
+      "flex-layout.row#sku-selector-quantity",
+      "product-assembly-options",
+      "product-gifts",
+      "flex-layout.row#buy-button",
+      "modal-trigger#medios-de-pago",
+      "availability-subscriber",
+      "shipping-simulator",
+      "share#default"
+    ]
+  },
+
+  "flex-layout.col#right-col-phone": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "flex-layout.row#brand-stock-phone",
+      "flex-layout.row#product-name",
+      "product-identifier.product",
+      "product-specification-group#rcol",
+      "product-rating-summary",
+      "flex-layout.row#list-price-savings",
+      "flex-layout.row#selling-price",
+      "product-installments",
+      "product-separator",
+      "flex-layout.row#sku-selector-quantity",
+      "product-assembly-options",
+      "product-gifts",
+      "modal-trigger#medios-de-pago",
+      "flex-layout.row#buy-button",
+      "availability-subscriber",
+      "shipping-simulator",
+      "share#default"
+    ]
+  },
+
+ /* ========================== Modal Medios de Pago ========================== */
+
+ "modal-trigger#medios-de-pago": {
+  "children": ["flex-layout.row#medios-de-pago",
+               "modal-layout#medios-de-pago"]
+  },
+
+  "flex-layout.row#medios-de-pago": {
+    "props":{
+      "blockClass":["compra-segura"]
+    },
+    "children": ["flex-layout.col#medios-de-pago"]
+  },
+
+  "flex-layout.col#medios-de-pago": {
+    "props":{
+      "blockClass":["compra-segura"]
+    },
+    "children": ["image#medios-de-pago",
+                 "rich-text#medios-de-pago"]
+  },
+  
+  "image#medios-de-pago": {
+    "title":"Medios de pago",
+    "props": {
+      "blockClass": "medios-de-pago",
+      "src": "https://ameriedie.vtexassets.com/arquivos/ids/155443"
+    }
+  },
+  
+  "rich-text#medios-de-pago": {
+    "props": {
+      "blockClass":"medios-de-pago-link",
+      "text": "Ver Medios de Pago"
+    }
+  },
+
+  "modal-layout#medios-de-pago": {
+    "props": {
+      "blockClass":"medios-de-pago-modal"
+    },
+    "children": ["rich-text#modal-content"]
+  },
+  "rich-text#modal-content": {
+    "props": {
+      "blockClass":"medios-de-pago-contenido",
+      "text": "Información sobre medios de pago"
+    }
+  },
+
+ /* ========================================================================== */
+
+  "flex-layout.row#sku-selector-quantity": {
+    "props":{
+      "blockClass": "sku-selector-quantity"
+    },
+    "children": ["flex-layout.col#quantity",
+                 "flex-layout.col#sku-selector",
+                 "flex-layout.col#spacer"
+                ]
+  },
+
+  "flex-layout.col#sku-selector": {
+    "props":{
+      "width":"auto",
+      "blockClass": "sku-selector"
+    },
+    "children": ["sku-selector"]
+  },
+
+  "flex-layout.col#quantity": {
+    "props":{
+      "width":"20%",
+      "blockClass": "quantity"
+    },
+    "children": ["product-quantity#quantity-selector"]
+  }, 
+
+  "flex-layout.col#spacer": {
+    "props":{
+      "width":"auto"
+    },
+    "children": []
+  }, 
+
+
+  "product-quantity#quantity-selector": {
+    "props":{
+      "blockClass":"product-quantity",
+      "selectorType":"dropdown",
+      "width":"auto"
+    }
+  },
+
+  "shipping-simulator": {
+    "props": {
+      "blockClass":"shipping-simulator"
+    }
+  },
+
+  "flex-layout.row#brand-stock-desktop": {
+    "props": {
+      "marginBottom": 3,
+      "blockClass":"brand-stock-desktop"
+    },
+    "children": ["vtex.store-components:product-brand#marca",
+                 "rich-text#separator",
+                "vtex.product-highlights@2.x:product-highlights#best-selling-item-desktop",
+                "product-availability#product-stock"]
+  },
+
+  "flex-layout.row#brand-stock-phone": {
+    "props": {
+      "marginBottom": 3,
+      "blockClass":"brand-stock-phone"
+    },
+    "children": ["vtex.store-components:product-brand#marca",
+                //  "rich-text#separator",
+                "vtex.product-highlights@2.x:product-highlights#best-selling-item-phone",
+                "product-availability#product-stock"]
+  },
+
+  
+
+  "similar-products-variants#productos-similares": {
+    "props": {
+        "imageLabel": "Otros Tamaños",
+        "textLabel": "Otros Tamaños"
+    }
+  },
+
+  "vtex.store-components:product-brand#marca": {
+    "props":{
+      "blockClass":"marca-style",
+      "displayMode":"text"
+    }
+  },
+
+  "rich-text#test-text": {
+    "props": {
+      "text": "**Stephanie Demner**"
+    }
+  },
+
+  "rich-text#separator": {
+    "props": {
+      "blockClass":"separator",
+      "text": "**|**"
+    }
+  },
+
+  "rich-text#best-selling": {
+    "props": {
+      "blockClass":"best-selling",
+      "text": "**Más vendido**"
+    }
+  },
+
+  "product-availability#product-stock": {
+    "props": {
+      "showAvailability": "stock",
+      "showAvailabilityMessage": "({quantity} disponibles)",
+      "blockClass": "product-stock"
+    }
+  },
+
+  "flex-layout.row#product-name": {
+    "props": {
+      "marginBottom": 3
+    },
+    "children": ["vtex.store-components:product-name"]
+  },
+
+  "sku-selector": {
+    "props": {
+      "blockClass":"sku-selector",
+      "variationsSpacing": 3,
+      "showValueNameForImageVariation": true
+    }
+  },
+
+  "flex-layout.row#buy-button": {
+    "props": {
+      "blockClass":"buy-button",
+      "marginTop": 4,
+      "marginBottom": 7
+    },
+    "children": ["add-to-cart-button#pdp-buy-button"]
+  },
+
+  "add-to-cart-button#pdp-buy-button": {
+    "props": {
+      "text": "Comprar",
+      "blockClass": "pdp-buy-button"
+    }
+  },
+
+  "flex-layout.row#product-availability": {
+    "props": {
+      "colGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7
+    },
+    "children": [
+      "flex-layout.col#stack",
+      "flex-layout.col#right-col-availability"
+    ]
+  },
+  "flex-layout.col#right-col-availability": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "blockClass": "info-availability"
+    },
+    "children": [
+      "flex-layout.row#product-name",
+      "product-identifier.product",
+      "sku-selector",
+      "flex-layout.row#availability"
+    ]
+  },
+  "flex-layout.row#availability": {
+    "props": {
+      "blockClass": "message-availability"
+    },
+    "children": ["availability-subscriber"]
+  },
+
+  "share#default": {
+    "props": {
+      "social": {
+        "Facebook": true,
+        "WhatsApp": true,
+        "Twitter": false,
+        "Pinterest": true
+      }
+    }
+  },
+
+  /* ========================== Leyenda "Más vendido" ========================= */
+
+  // "flex-layout.row#best-selling": {
+  //   "props": {
+  //     "blockClass": ["best-selling"],
+  //     "colSizing": "auto",
+  //     "preserveLayoutOnMobile": true
+  //   },
+
+  //   "children": [
+  //     "vtex.product-highlights@2.x:product-highlights#best-selling-item"
+  //   ]
+  // },
+
+  "vtex.product-highlights@2.x:product-highlights#best-selling-item-desktop": {
+    "props": {
+      "blockClass": ["best-selling-desktop"],
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Más vendido"]
+      }
+    },
+    "children": ["product-highlight-wrapper#best-selling-item-desktop"]
+  },
+
+  "product-highlight-wrapper#best-selling-item-desktop": {
+    "props": {
+      "blockClass": ["best-selling-desktop"]
+    },
+    "children": ["product-highlight-text#best-selling-item-desktop"]
+  },
+
+  "product-highlight-text#best-selling-item-desktop": {
+    "props": {
+      "blockClass": ["best-selling-desktop"],
+      "message": "{highlightName}"
+    }
+  },
+  
+  
+  
+  "vtex.product-highlights@2.x:product-highlights#best-selling-item-phone": {
+    "props": {
+      "blockClass": ["best-selling-phone"],
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Más vendido"]
+      }
+    },
+    "children": ["product-highlight-wrapper#best-selling-item-phone"]
+  },
+
+"product-highlight-wrapper#best-selling-item-phone": {
+    "props": {
+      "blockClass": ["best-selling-phone"]
+    },
+    "children": ["product-highlight-text#best-selling-item-phone"]
+  },
+
+  "product-highlight-text#best-selling-item-phone": {
+    "props": {
+      "blockClass": ["best-selling-phone"],
+      "message": "{highlightName}"
+    }
+  }
+
+  
+
+}
